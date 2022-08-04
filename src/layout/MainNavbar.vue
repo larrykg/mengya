@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Vue Material Kit</h3>
+        <h3 class="md-title">This is MenG Ya</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -69,7 +69,7 @@
                 v-if="showDownload"
               >
                 <i class="material-icons">content_paste</i>
-                <p>Documentation</p>
+                <p>我们的链接</p>
               </md-list-item>
 
               <md-list-item
