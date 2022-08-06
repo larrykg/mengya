@@ -18,7 +18,8 @@ import router from "./router";
 
 import MaterialKit from "./plugins/material-kit";
 //统一引入API
-import * as $API from '@/api';
+
+import * as API from '@/api';
 
 Vue.config.productionTip = false;
 
