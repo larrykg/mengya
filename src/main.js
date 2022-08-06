@@ -17,24 +17,30 @@ import App from "./App.vue";
 import router from "./router";
 
 import MaterialKit from "./plugins/material-kit";
+//统一引入API
+import * as $API from '@/api';
 
 Vue.config.productionTip = false;
 
 Vue.use(MaterialKit);
 
 const NavbarStore = {
-  showNavbar: false
+    showNavbar: false
 };
 
 Vue.mixin({
-  data() {
-    return {
-      NavbarStore
-    };
-  }
+    data() {
+        return {
+            NavbarStore
+        };
+    }
 });
 
 new Vue({
-  router,
-  render: h => h(App)
+    router,
+    beforeCreate() {
+      Vue.prototype.$bus = this;
+      Vue.prototype.$API = API
+    },
+    render: h => h(App)
 }).$mount("#app");

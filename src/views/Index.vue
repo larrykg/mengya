@@ -20,11 +20,12 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>Basic Elements</h2>
+            <h2>Basic Elements111111</h2>
           </div>
           <basic-elements></basic-elements>
         </div>
       </div>
+      <p>test</p>
       <div class="section section-navbars">
         <div class="container">
           <small-navigation></small-navigation>
@@ -49,11 +50,13 @@
         </div>
         <notifications></notifications>
       </div>
+
       <div class="section">
         <div class="container">
           <typography-images></typography-images>
         </div>
       </div>
+
       <div class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>

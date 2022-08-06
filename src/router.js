@@ -6,6 +6,7 @@ import Login from "./views/Login.vue";
 import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
+import Cert from "@/views/Cert/Cert";
 
 Vue.use(Router);
 
@@ -45,7 +46,16 @@ export default new Router({
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
       }
-    }
+    },
+    {
+      path: "/cert",
+      name: "cert",
+      components: { default: Cert, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
   ],
   scrollBehavior: to => {
     if (to.hash) {
