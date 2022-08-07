@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
     <div id="javascriptComponents">
-      <div class="title">
+      <div v-if="false" class="title">
         <h2>Javascript components</h2>
       </div>
-      <div class="md-layout">
+      <div v-if="false" class="md-layout">
         <div class="md-layout-item md-small-size-100">
           <div class="title">
             <h3>Modal</h3>
@@ -143,7 +143,8 @@
         </div>
       </div>
       <br />
-      <div class="title">
+
+      <div v-if="false" class="title">
         <h3>Carousel</h3>
       </div>
       <div class="md-layout">
@@ -156,7 +157,7 @@
               autoplay
               :autoplay-timeout="5000"
               :mouse-drag="false"
-              navigationEnabled
+              :navigationEnabled="true"
               navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
               navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
             >

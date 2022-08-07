@@ -121,24 +121,27 @@
                 <el-tag size="small">{{ tableData[0].identify_result }}</el-tag>
               </el-descriptions-item>
 
-              <el-descriptions-item content-class-name="my-content" :label="label.desc" :contentStyle="{'text-align': 'left'}">
+              <el-descriptions-item content-class-name="my-content" :label="label.desc"
+                                    :contentStyle="{'text-align': 'left'}">
                 {{ tableData[0].desc }}
               </el-descriptions-item>
 
 
             </el-descriptions>
           </div>
-          <p v-if="url">{{pikeImage}}</p>
-          <el-image
-              v-for="(imgUrl,index) in url"
-              :key="index"
-              style="width: 200px; height: 200px;margin-left: 10px"
-              :src="imgUrl.product_img"
-              :preview-src-list="picUrl">
-          </el-image>
+          <p v-if="url.length>0">{{ pikeImage }}</p>
+          <div lass=" text-center">
+            <el-image
+                v-for="(imgUrl,index) in url"
+                :key="index"
+                style="width: 200px; height: 200px;margin-left: 10px"
+                :src="imgUrl.product_img"
+                :preview-src-list="picUrl">
+            </el-image>
+          </div>
 
 
-        <div style="height: 200px"></div>
+          <div style="height: 200px"></div>
 
 
           <div v-if="false" class="profile-tabs">
@@ -211,13 +214,13 @@ export default {
     return {
       url: [],
       picUrl: [],
-      product_info:'产品信息',
-      pikeImage:'',
+      product_info: '产品信息',
+      pikeImage: '',
       classicModal: false,
       tableData: [],
       inputNo: null,
       label: {},
-      labelCh:{
+      labelCh: {
         product_id: "产品ID:",
         name: "名称:",
         product_type: "类别:",
@@ -230,7 +233,7 @@ export default {
         identify_result: "鉴定结果:",
         desc: "备注:",
       },
-      labelEn:{
+      labelEn: {
         product_id: "Product ID:",
         name: "Name:",
         product_type: "Product Type:",
@@ -289,15 +292,17 @@ export default {
     submitCk(value) {
       let n = parseFloat(value);
       console.log(isNaN(n));
-      if(isNaN(n)){
+      if (isNaN(n)) {
         return false
-      }else return true
+      } else return true
       // let reg = /\d/;
       // if (!reg.test(value)) {
       //   return false
       // }
     },
     async search() {
+      this.tableData.splice(0, this.tableData.length ? this.tableData.length : 0);
+      this.url.splice(0, this.url.length ? this.url.length : 0)
       let inputFlag = this.submitCk(this.inputNo);
       if (!inputFlag) {
         this.classicModal = true;
@@ -308,17 +313,24 @@ export default {
       if (res.status > 0) {
         this.classicModal = true
       }
+      if (!res.data) {
+        this.tableData.splice(0, 1);
+        this.url.splice(0, this.url.length?this.url.length:0)
+        return
+      }
+      debugger
+
       this.tableData.push(res.data.list);
-      if(res.data.list.lan==='ch'){
+      if (res.data.list.lan === 'ch') {
         Object.assign(this.label, this.labelCh);
-      }else {
+      } else {
         Object.assign(this.label, this.labelEn);
-        this.pikeImage ='Click to Enlarge The Picture';
+        this.pikeImage = 'Click to Enlarge The Picture';
         this.product_info = 'Product Info'
       }
       if (this.tableData.length > 0) {
         this.url = res.data.list.pic;
-        if(this.url){
+        if (this.url) {
           this.url.forEach(item => {
             this.picUrl.push(item.product_img)
           })

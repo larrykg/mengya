@@ -17,7 +17,7 @@
       </div>
     </parallax>
     <div class="main main-raised">
-      <div class="section section-basic">
+      <div v-if="false" class="section section-basic">
         <div class="container">
           <div class="title">
             <h2>Basic Elements111111</h2>
@@ -25,24 +25,27 @@
           <basic-elements></basic-elements>
         </div>
       </div>
-      <p>test</p>
-      <div class="section section-navbars">
+
+      <div v-if="false" class="section section-navbars">
         <div class="container">
           <small-navigation></small-navigation>
         </div>
         <navigation></navigation>
       </div>
-      <div class="section section-tabs">
+
+      <div v-if="false" class="section section-tabs">
         <div class="container">
           <tabs></tabs>
         </div>
       </div>
-      <div class="section section-white">
+
+      <div v-if="false" class="section section-white">
         <div class="container">
           <nav-pills></nav-pills>
         </div>
       </div>
-      <div class="section section-notifications">
+
+      <div v-if="false" class="section section-notifications">
         <div class="container">
           <div class="title">
             <h3>Notifications</h3>
@@ -51,18 +54,20 @@
         <notifications></notifications>
       </div>
 
-      <div class="section">
+
+      <div  v-if="false" class="section">
         <div class="container">
           <typography-images></typography-images>
         </div>
       </div>
 
-      <div class="section section-javascript">
+      <div   class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>
         </div>
       </div>
-      <div class="section">
+
+      <div v-if="false"  class="section">
         <div class="container text-center">
           <div class="md-layout">
             <div
@@ -79,7 +84,8 @@
           </div>
         </div>
       </div>
-      <div class="section section-signup page-header" :style="signupImage">
+
+      <div v-if="false"  class="section section-signup page-header" :style="signupImage">
         <div class="container">
           <div class="md-layout">
             <div
@@ -132,14 +138,14 @@
           </div>
         </div>
       </div>
-      <div class="md-layout">
+      <div v-if="false" class="md-layout">
         <div class="md-layout-item text-center">
           <md-button href="#/login" class="md-simple md-success md-lg"
             >View Login Page</md-button
           >
         </div>
       </div>
-      <div class="section section-examples">
+      <div v-if="false" class="section section-examples">
         <div class="container-fluid text-center">
           <div class="md-layout">
             <div class="md-layout-item">
@@ -169,7 +175,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-download" id="downloadSection">
+      <div v-if="false" class="section section-download" id="downloadSection">
         <div class="container">
           <div class="md-layout text-center">
             <div class="md-layout-item md-size-66 md-small-size-100 mx-auto">
