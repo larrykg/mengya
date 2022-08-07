@@ -17,9 +17,14 @@ import App from "./App.vue";
 import router from "./router";
 
 import MaterialKit from "./plugins/material-kit";
-//统一引入API
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+//统一引入API
 import * as API from '@/api';
+
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
