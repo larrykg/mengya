@@ -9,8 +9,8 @@
             <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
-              <h1>This Is MenG Ya</h1>
-              <h3>A Badass Vue.js UI Kit made with Material Design.</h3>
+              <h1>一直在</h1>
+              <h3>专业的评级</h3>
             </div>
           </div>
         </div>

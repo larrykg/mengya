@@ -129,8 +129,9 @@
 
             </el-descriptions>
           </div>
-          <p v-if="picUrl.length>0">{{ pikeImage }}</p>
-          <div lass=" text-center">
+
+          <div class=" text-center">
+            <p v-if="picUrl.length>0">{{ pikeImage }}</p>
             <el-image
                 v-if="url.length>0"
                 alt=""
