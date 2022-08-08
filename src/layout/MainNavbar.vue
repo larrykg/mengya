@@ -1,10 +1,10 @@
 <template>
   <md-toolbar
-    id="toolbar"
-    md-elevation="0"
-    class="md-transparent md-absolute"
-    :class="extraNavClasses"
-    :color-on-scroll="colorOnScroll"
+      id="toolbar"
+      md-elevation="0"
+      class="md-transparent md-absolute"
+      :class="extraNavClasses"
+      :color-on-scroll="colorOnScroll"
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
@@ -12,9 +12,9 @@
       </div>
       <div class="md-toolbar-section-end">
         <md-button
-          class="md-just-icon md-simple md-toolbar-toggle"
-          :class="{ toggled: toggledClass }"
-          @click="toggleNavbarMobile()"
+            class="md-just-icon md-simple md-toolbar-toggle"
+            :class="{ toggled: toggledClass }"
+            @click="toggleNavbarMobile()"
         >
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -29,15 +29,15 @@
             <md-list>
               <li class="md-list-item" v-if="!showDownload">
                 <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                    href="javascript:void(0)"
+                    class="md-list-item-router md-list-item-container md-button-clean dropdown"
                 >
                   <div class="md-list-item-content">
                     <drop-down direction="down">
                       <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
-                        data-toggle="dropdown"
+                          slot="title"
+                          class="md-button md-button-link md-white md-simple dropdown-toggle"
+                          data-toggle="dropdown"
                       >
                         <i class="material-icons">apps</i>
                         <p>Components</p>
@@ -51,7 +51,7 @@
                         </li>
                         <li>
                           <a
-                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+                              href="https://demos.creative-tim.com/vue-material-kit/documentation/"
                           >
                             <i class="material-icons">content_paste</i>
                             <p>Documentation</p>
@@ -64,18 +64,19 @@
               </li>
 
               <md-list-item
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                target="_blank"
-                v-if="showDownload"
+                  href="#/cert"
+                  target="_self"
+                  v-if="showDownload"
               >
-                <i class="material-icons">content_paste</i>
-                <p>我们的链接</p>
+<!--                <i class="material-icons">content_paste</i>-->
+                <i   class="el-icon-search icon_font"></i>
+                <p>查询</p>
               </md-list-item>
 
               <md-list-item
-                href="javascript:void(0)"
-                @click="scrollToElement()"
-                v-if="showDownload"
+                  href="javascript:void(0)"
+                  @click="scrollToElement()"
+                  v-if="showDownload"
               >
                 <i class="material-icons">cloud_download</i>
                 <p>Download</p>
@@ -83,15 +84,15 @@
 
               <li class="md-list-item" v-else>
                 <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                    href="javascript:void(0)"
+                    class="md-list-item-router md-list-item-container md-button-clean dropdown"
                 >
                   <div class="md-list-item-content">
                     <drop-down direction="down">
                       <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
-                        data-toggle="dropdown"
+                          slot="title"
+                          class="md-button md-button-link md-white md-simple dropdown-toggle"
+                          data-toggle="dropdown"
                       >
                         <i class="material-icons">view_carousel</i>
                         <p>Examples</p>
@@ -122,33 +123,42 @@
               </li>
 
               <md-list-item
-                href="https://twitter.com/CreativeTim"
-                target="_blank"
+                  href="https://twitter.com/CreativeTim"
+                  target="_blank"
               >
-                <i class="fab fa-twitter"></i>
-                <p class="hidden-lg">Twitter</p>
+<!--                <i class="fab fa-twitter"></i>-->
+
+                  <i  class="el-icon-s-operation icon_font"></i>
+
+
+                <p class="hidden-lg">手机文字</p>
                 <md-tooltip md-direction="bottom"
-                  >Follow us on Twitter</md-tooltip
+                >一行文字
+                </md-tooltip
                 >
               </md-list-item>
               <md-list-item
-                href="https://www.facebook.com/CreativeTim"
-                target="_blank"
+                  href="https://www.facebook.com/CreativeTim"
+                  target="_blank"
               >
-                <i class="fab fa-facebook-square"></i>
-                <p class="hidden-lg">Facebook</p>
+<!--                <i class="fab fa-facebook-square"></i>-->
+                <i class="el-icon-user icon_font"></i>
+                <p class="hidden-lg">人</p>
                 <md-tooltip md-direction="bottom"
-                  >Like us on Facebook</md-tooltip
+                >个人
+                </md-tooltip
                 >
               </md-list-item>
               <md-list-item
-                href="https://www.instagram.com/CreativeTimOfficial"
-                target="_blank"
+                  href="https://www.instagram.com/CreativeTimOfficial"
+                  target="_blank"
               >
-                <i class="fab fa-instagram"></i>
-                <p class="hidden-lg">Instagram</p>
+<!--                <i class="fab fa-instagram"></i>-->
+                <i class="el-icon-share icon_font"></i>
+                <p class="hidden-lg">分享</p>
                 <md-tooltip md-direction="bottom"
-                  >Follow us on Instagram</md-tooltip
+                >分享
+                </md-tooltip
                 >
               </md-list-item>
             </md-list>
@@ -161,6 +171,7 @@
 
 <script>
 let resizeTimeout;
+
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue
   if (!resizeTimeout) {
@@ -174,6 +185,7 @@ function resizeThrottler(actualResizeHandler) {
 }
 
 import MobileMenu from "@/layout/MobileMenu";
+
 export default {
   components: {
     MobileMenu
@@ -207,7 +219,7 @@ export default {
   },
   computed: {
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile"];
+      const excludedRoutes = ["login", "landing", "profile","cert"];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },
@@ -234,7 +246,7 @@ export default {
     },
     handleScroll() {
       let scrollValue =
-        document.body.scrollTop || document.documentElement.scrollTop;
+          document.body.scrollTop || document.documentElement.scrollTop;
       let navbarColor = document.getElementById("toolbar");
       this.currentScrollValue = scrollValue;
       if (this.colorOnScroll > 0 && scrollValue > this.colorOnScroll) {
@@ -253,7 +265,7 @@ export default {
     scrollToElement() {
       let element_id = document.getElementById("downloadSection");
       if (element_id) {
-        element_id.scrollIntoView({ block: "end", behavior: "smooth" });
+        element_id.scrollIntoView({block: "end", behavior: "smooth"});
       }
     }
   },
@@ -265,3 +277,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.icon_font{
+  font-size: 20px;
+}
+</style>
