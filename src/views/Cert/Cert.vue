@@ -129,12 +129,14 @@
 
             </el-descriptions>
           </div>
-          <p v-if="url.length>0">{{ pikeImage }}</p>
+          <p v-if="picUrl.length>0">{{ pikeImage }}</p>
           <div lass=" text-center">
             <el-image
+                v-if="url.length>0"
+                alt=""
                 v-for="(imgUrl,index) in url"
                 :key="index"
-                style="width: 200px; height: 200px;margin-left: 10px"
+                style="width: 200px; height: 400px;margin-left: 10px"
                 :src="imgUrl.product_img"
                 :preview-src-list="picUrl">
             </el-image>
@@ -291,7 +293,7 @@ export default {
     },
     submitCk(value) {
       let n = parseFloat(value);
-      console.log(isNaN(n));
+      // console.log(isNaN(n));
       if (isNaN(n)) {
         return false
       } else return true
@@ -301,8 +303,12 @@ export default {
       // }
     },
     async search() {
-      this.tableData.splice(0, this.tableData.length ? this.tableData.length : 0);
-      this.url.splice(0, this.url.length ? this.url.length : 0)
+
+      this.tableData.splice(0, this.tableData.length > 0 ? this.tableData.length : 0);
+      this.url.splice(0, this.url ? this.url.length : 0);
+      this.picUrl.splice(0, this.picUrl ? this.picUrl.length : 0);
+
+      //输入校验
       let inputFlag = this.submitCk(this.inputNo);
       if (!inputFlag) {
         this.classicModal = true;
@@ -313,30 +319,35 @@ export default {
       if (res.status > 0) {
         this.classicModal = true
       }
+
       if (!res.data) {
         this.tableData.splice(0, 1);
-        this.url.splice(0, this.url.length?this.url.length:0)
+        this.url.splice(0, this.url ? this.url.length : 0)
         return
       }
-      debugger
 
       this.tableData.push(res.data.list);
-      if (res.data.list.lan === 'ch') {
+      if (res.data.list.lan === 'ch' || !res.data.list.lan) {
         Object.assign(this.label, this.labelCh);
-      } else {
+        this.pikeImage = '点击放大蹄片';
+        this.product_info = '产品信息'
+      } else if (res.data.list.lan === 'en') {
         Object.assign(this.label, this.labelEn);
         this.pikeImage = 'Click to Enlarge The Picture';
         this.product_info = 'Product Info'
       }
-      if (this.tableData.length > 0) {
+
+      //this.url: 分张 this.picUrl:所有
+      if (res.data.list.pic) {
         this.url = res.data.list.pic;
-        if (this.url) {
-          this.url.forEach(item => {
+        console.log('this.url', this.url);
+        console.log('res.data.list.pic', res.data.list.pic);
+
+        if (res.data.list.pic) {
+          res.data.list.pic.forEach(item => {
             this.picUrl.push(item.product_img)
           })
         }
-
-
       }
     }
   }
