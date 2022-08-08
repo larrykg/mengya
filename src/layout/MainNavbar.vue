@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">This is MenG Ya</h3>
+        <h3 class="md-title"></h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -27,7 +27,7 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <li class="md-list-item" v-if="!showDownload">
+              <li class="md-list-item" v-if="false">
                 <a
                     href="javascript:void(0)"
                     class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -76,13 +76,13 @@
               <md-list-item
                   href="javascript:void(0)"
                   @click="scrollToElement()"
-                  v-if="showDownload"
+                  v-if="false"
               >
                 <i class="material-icons">cloud_download</i>
                 <p>Download</p>
               </md-list-item>
 
-              <li class="md-list-item" v-else>
+              <li class="md-list-item" v-if="false">
                 <a
                     href="javascript:void(0)"
                     class="md-list-item-router md-list-item-container md-button-clean dropdown"
