@@ -17,6 +17,17 @@
       </div>
     </parallax>
     <div class="main main-raised">
+      <div class="alert alert-info">
+        <div class="container">
+          <button type="button" aria-hidden="true" class="close" @click="event => removeNotify(event,'alert-info')">
+            <md-icon>clear</md-icon>
+          </button>
+          <div class="alert-icon">
+            <md-icon>info_outline</md-icon>
+          </div>
+          <b> 敬请关注 </b> : 华誉评级即将推出现时特惠活动敬请期待...
+        </div>
+      </div>
       <div v-if="false" class="section section-basic">
         <div class="container">
           <div class="title">
@@ -66,6 +77,8 @@
           <javascript-components></javascript-components>
         </div>
       </div>
+
+      <tabs></tabs>
 
       <div v-if="false"  class="section">
         <div class="container text-center">
@@ -349,6 +362,13 @@ export default {
       } else {
         this.leafShow = true;
       }
+    },
+    removeNotify(e, notifyClass) {
+      let target = e.target;
+      while (target.className.indexOf(notifyClass) === -1) {
+        target = target.parentNode;
+      }
+      return target.parentNode.removeChild(target);
     }
   },
   computed: {

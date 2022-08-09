@@ -163,18 +163,18 @@
             >
               <slide>
                 <div class="carousel-caption">
-                  <h4>
+                  <h4 v-if="false">
                     <md-icon>location_on</md-icon>
-                    Somewhere Beyond, United States
+                    清代“一本万利 招财童子至 利市仙官来”五十两开炉吉语锭
                   </h4>
                 </div>
                 <img :src="carousel1" alt="carousel1" />
               </slide>
               <slide>
                 <div class="carousel-caption">
-                  <h4>
+                  <h4 v-if="false" style="color: #000000">
                     <md-icon>location_on</md-icon>
-                    Yellowstone National Park, United States
+                    造币总厂光绪元宝库平七钱二分银币
                   </h4>
                 </div>
                 <img :src="carousel2" alt="carousel2" />
@@ -183,7 +183,7 @@
                 <div class="carousel-caption">
                   <h4>
                     <md-icon>location_on</md-icon>
-                    Yellowstone National Park, United States
+                    清代“一本万利 招财童子至 利市仙官来”五十两开炉吉语锭
                   </h4>
                 </div>
                 <img :src="carousel3" alt="carousel3" />
@@ -206,9 +206,9 @@ export default {
     return {
       classicModal: false,
       selectedDate: new Date("2018/03/26"),
-      carousel1: require("@/assets/img/nature-2.jpg"),
-      carousel2: require("@/assets/img/nature.jpg"),
-      carousel3: require("@/assets/img/nature-3.jpg")
+      carousel1: require("@/assets/img/coin/012.jpg"),
+      carousel2: require("@/assets/img/coin/011.jpg"),
+      carousel3: require("@/assets/img/coin/010.jpg")
     };
   },
   methods: {
