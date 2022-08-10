@@ -4,10 +4,10 @@
       <div class="md-layout">
         <div class="md-layout-item">
           <div class="image-wrapper">
-            <img :src="leaf4" alt="leaf4" class="leaf4" v-show="leafShow" />
-            <img :src="leaf3" alt="leaf3" class="leaf3" v-show="leafShow" />
-            <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
-            <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
+            <img :src="leaf4" alt="leaf4" class="leaf4" v-show="leafShow"/>
+            <img :src="leaf3" alt="leaf3" class="leaf3" v-show="leafShow"/>
+            <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow"/>
+            <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow"/>
             <div class="brand">
               <h1>一直在</h1>
               <h3>专业的评级</h3>
@@ -66,13 +66,13 @@
       </div>
 
 
-      <div  v-if="false" class="section">
+      <div v-if="false" class="section">
         <div class="container">
           <typography-images></typography-images>
         </div>
       </div>
 
-      <div   class="section section-javascript">
+      <div class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>
         </div>
@@ -80,11 +80,11 @@
 
       <tabs></tabs>
 
-      <div v-if="false"  class="section">
+      <div v-if="false" class="section">
         <div class="container text-center">
           <div class="md-layout">
             <div
-              class="md-layout-item md-size-66 md-xsmall-size-100 ml-auto mr-auto text-center"
+                class="md-layout-item md-size-66 md-xsmall-size-100 ml-auto mr-auto text-center"
             >
               <h2>Completed with examples</h2>
               <h4>
@@ -98,32 +98,32 @@
         </div>
       </div>
 
-      <div v-if="false"  class="section section-signup page-header" :style="signupImage">
+      <div v-if="false" class="section section-signup page-header" :style="signupImage">
         <div class="container">
           <div class="md-layout">
             <div
-              class="md-layout-item md-size-33 md-medium-size-40 md-small-size-50 md-xsmall-size-70 mx-auto text-center"
+                class="md-layout-item md-size-33 md-medium-size-40 md-small-size-50 md-xsmall-size-70 mx-auto text-center"
             >
               <login-card header-color="green">
                 <h4 slot="title" class="card-title">Login</h4>
                 <md-button
-                  slot="buttons"
-                  href="javascript:void(0)"
-                  class="md-just-icon md-simple md-white"
+                    slot="buttons"
+                    href="javascript:void(0)"
+                    class="md-just-icon md-simple md-white"
                 >
                   <i class="fab fa-facebook-square"></i>
                 </md-button>
                 <md-button
-                  slot="buttons"
-                  href="javascript:void(0)"
-                  class="md-just-icon md-simple md-white"
+                    slot="buttons"
+                    href="javascript:void(0)"
+                    class="md-just-icon md-simple md-white"
                 >
                   <i class="fab fa-twitter"></i>
                 </md-button>
                 <md-button
-                  slot="buttons"
-                  href="javascript:void(0)"
-                  class="md-just-icon md-simple md-white"
+                    slot="buttons"
+                    href="javascript:void(0)"
+                    class="md-just-icon md-simple md-white"
                 >
                   <i class="fab fa-google-plus-g"></i>
                 </md-button>
@@ -154,7 +154,8 @@
       <div v-if="false" class="md-layout">
         <div class="md-layout-item text-center">
           <md-button href="#/login" class="md-simple md-success md-lg"
-            >View Login Page</md-button
+          >View Login Page
+          </md-button
           >
         </div>
       </div>
@@ -164,26 +165,222 @@
             <div class="md-layout-item">
               <a href="#/landing" target="_blank">
                 <img
-                  :src="landing"
-                  alt="Rounded Image"
-                  class="img-raised rounded img-fluid"
+                    :src="landing"
+                    alt="Rounded Image"
+                    class="img-raised rounded img-fluid"
                 />
               </a>
               <md-button href="#/landing" class="md-simple md-success md-lg"
-                >View Landing Page</md-button
+              >View Landing Page
+              </md-button
               >
             </div>
             <div class="md-layout-item">
               <a href="#/profile" target="_blank">
                 <img
-                  :src="profile"
-                  alt="Rounded Image"
-                  class="img-raised rounded img-fluid"
+                    :src="profile"
+                    alt="Rounded Image"
+                    class="img-raised rounded img-fluid"
                 />
               </a>
               <md-button href="#/profile" class="md-simple md-success md-lg"
-                >View Profile Page</md-button
+              >View Profile Page
+              </md-button
               >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main main-raised">
+        <div class="section">
+          <div class="container">
+            <div class="md-layout">
+              <div
+                  class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
+              >
+                <h2 class="title text-center">经典藏品</h2>
+                <h5 class="description">
+                  This is the paragraph where you can write more details about
+                  your product. Keep you user engaged by providing meaningful
+                  information. Remember that by this time, the user is curious,
+                  otherwise he wouldn't scroll to get here. Add a button if you
+                  want the user to see more.
+                </h5>
+              </div>
+            </div>
+            <div class="features text-center">
+              <div class="md-layout">
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="info">
+                    <div class="icon icon-info">
+                      <md-icon>chat</md-icon>
+                    </div>
+                    <h4 class="info-title">Free Chat</h4>
+                    <p>
+                      Divide details about your product or agency work into parts.
+                      Write a few lines about each one. A paragraph describing a
+                      feature will be enough.
+                    </p>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="info">
+                    <div class="icon icon-success">
+                      <md-icon>verified_user</md-icon>
+                    </div>
+                    <h4 class="info-title">Verified Users</h4>
+                    <p>
+                      Divide details about your product or agency work into parts.
+                      Write a few lines about each one. A paragraph describing a
+                      feature will be enough.
+                    </p>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="info">
+                    <div class="icon icon-danger">
+                      <md-icon>fingerprint</md-icon>
+                    </div>
+                    <h4 class="info-title">Fingerprint</h4>
+                    <p>
+                      Divide details about your product or agency work into parts.
+                      Write a few lines about each one. A paragraph describing a
+                      feature will be enough.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section text-center">
+          <div class="container">
+            <h2 class="title">经典藏品</h2>
+            <div class="team">
+              <div class="md-layout">
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg1"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class="   "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        宣统年造大清银币伍角
+                        <br/>
+<!--                        <small class="card-description text-muted">Model</small>-->
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          宣统年造大清银币伍角“1/2DOL.”一枚，K-220/LM-25，奥地利维也纳造币厂设计制模，1910年度支部天津造币总厂铸造，小批量生产并未发行，通体浅灰色包浆，底光尚存
+                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg2"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class=" "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        户部光绪元宝二十文铜币样币
+                        <br/>
+<!--                        <small class="card-description text-muted">Designer</small-->
+
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          Y1903年户部光绪元宝二十文铜币样币一枚，Y-5/CL-HB.08a，属试样或留档样币性质，币坯制作精良，压力十足，马齿凌厉，图文深峻精美，底版充盈红铜光泽，精整度明显优于流通币，与中国钱币博物馆馆藏之户部二十文留档样币风格一致，存世极罕；据周沁园、李平文编著《中国机制铜元目录》记述，户部二十文样币目前私人收藏仅有二枚，另据孙浩先生考证，此版户部二十文流通币发行的时间和地点，并非晚清的天津总厂，而是1917年由湖北的武昌厂制作
+                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg3"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class="  "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        户部光绪元宝十文铜币
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Model</small>-->
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          1903年户部光绪元宝十文铜币一枚，Y-4/CL-HB.04，边花阴蕊版，全深打，铜光颇佳，PCGS MS63RB，目前为该公司RB级评级纪录唯一冠军分
+                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section section-contacts">
+          <div class="container">
+            <div class="md-layout">
+              <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
+                <h2 class="text-center title">Work with us</h2>
+                <h4 class="text-center description">
+                  Divide details about your product or agency work into parts.
+                  Write a few lines about each one and contact us about any
+                  further collaboration. We will responde get back to you in a
+                  couple of hours.
+                </h4>
+                <form class="contact-form">
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-50">
+                      <md-field>
+                        <label>Your Name</label>
+                        <md-input v-model="name" type="text"></md-input>
+                      </md-field>
+                    </div>
+                    <div class="md-layout-item md-size-50">
+                      <md-field>
+                        <label>Your Email</label>
+                        <md-input v-model="email" type="email"></md-input>
+                      </md-field>
+                    </div>
+                  </div>
+                  <md-field maxlength="5">
+                    <label>Your Message</label>
+                    <md-textarea v-model="message"></md-textarea>
+                  </md-field>
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-33 mx-auto text-center">
+                      <md-button class="md-success">Send Message</md-button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -198,9 +395,9 @@
                 to navigate to our website where you can find the kit. Our
                 friends from
                 <a
-                  href="https://themeisle.com/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website"
-                  target="_blank"
-                  >ThemeIsle</a
+                    href="https://themeisle.com/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website"
+                    target="_blank"
+                >ThemeIsle</a
                 >
                 created a Wordpress Theme which can be also downloaded for free.
                 Start a new project or give an old Bootstrap project a new look!
@@ -208,20 +405,22 @@
             </div>
             <div class="md-layout-item md-size-50 md-small-size-100 mx-auto">
               <md-button
-                href="https://www.creative-tim.com/product/material-kit"
-                target="_blank"
-                class="md-success md-lg"
-                ><i class="fab fa-html5"></i> Free HTML Download</md-button
+                  href="https://www.creative-tim.com/product/material-kit"
+                  target="_blank"
+                  class="md-success md-lg"
+              ><i class="fab fa-html5"></i> Free HTML Download
+              </md-button
               >
               <md-button
-                href="https://themeisle.com/themes/hestia/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website"
-                class="md-success md-lg"
-                target="_blank"
-                ><i class="fab fa-wordpress"></i> Wordpress Theme</md-button
+                  href="https://themeisle.com/themes/hestia/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website"
+                  class="md-success md-lg"
+                  target="_blank"
+              ><i class="fab fa-wordpress"></i> Wordpress Theme
+              </md-button
               >
             </div>
           </div>
-          <br /><br />
+          <br/><br/>
 
           <div class="md-layout text-center">
             <div class="md-layout-item md-size-66 md-small-size-100 mx-auto">
@@ -229,15 +428,15 @@
               <h4>
                 We've just launched
                 <a
-                  href="https://www.creative-tim.com/product/vue-material-dashboard-pro?ref=utp-mk-demos"
-                  target="_blank"
-                  >Vue Material Dashboard PRO</a
+                    href="https://www.creative-tim.com/product/vue-material-dashboard-pro?ref=utp-mk-demos"
+                    target="_blank"
+                >Vue Material Dashboard PRO</a
                 >
                 and
                 <a
-                  href="https://www.creative-tim.com/product/vue-material-kit-pro?ref=utp-vmk-demos"
-                  target="_blank"
-                  >Vue Material Kit PRO</a
+                    href="https://www.creative-tim.com/product/vue-material-kit-pro?ref=utp-vmk-demos"
+                    target="_blank"
+                >Vue Material Kit PRO</a
                 >. Every product has a huge number of components, sections and
                 example pages. Start Your Development With A Badass Bootstrap UI
                 Kit inspired by Material Design.
@@ -246,17 +445,23 @@
             <div class="md-layout-item md-size-50 md-small-size-100 mx-auto">
               <div class="btn-container">
                 <md-button
-                  href="https://www.creative-tim.com/product/vue-material-kit-pro?ref=utp-vmk-demos"
-                  class="md-button md-success md-lg md-upgrade"
-                  target="_blank"
-                  ><md-icon>unarchive</md-icon>Vue Material Kit PRO</md-button
+                    href="https://www.creative-tim.com/product/vue-material-kit-pro?ref=utp-vmk-demos"
+                    class="md-button md-success md-lg md-upgrade"
+                    target="_blank"
+                >
+                  <md-icon>unarchive</md-icon>
+                  Vue Material Kit PRO
+                </md-button
                 >
                 <md-button
-                  href="https://www.creative-tim.com/product/vue-material-dashboard-pro?ref=utp-vmd-demos"
-                  class="md-button md-success md-lg md-upgrade"
-                  target="_blank"
-                  ><md-icon>unarchive</md-icon>Vue Material Dashboard
-                  PRO</md-button
+                    href="https://www.creative-tim.com/product/vue-material-dashboard-pro?ref=utp-vmd-demos"
+                    class="md-button md-success md-lg md-upgrade"
+                    target="_blank"
+                >
+                  <md-icon>unarchive</md-icon>
+                  Vue Material Dashboard
+                  PRO
+                </md-button
                 >
               </div>
             </div>
@@ -270,16 +475,20 @@
             </div>
 
             <md-button class="md-twitter"
-              ><i class="fab fa-twitter"></i>Tweet</md-button
+            ><i class="fab fa-twitter"></i>Tweet
+            </md-button
             >
             <md-button class="md-facebook"
-              ><i class="fab fa-facebook-square"></i> Share</md-button
+            ><i class="fab fa-facebook-square"></i> Share
+            </md-button
             >
             <md-button class="md-google"
-              ><i class="fab fa-google-plus"></i> Share</md-button
+            ><i class="fab fa-google-plus"></i> Share
+            </md-button
             >
             <md-button class="md-github"
-              ><i class="fab fa-github"></i> Star</md-button
+            ><i class="fab fa-github"></i> Star
+            </md-button
             >
           </div>
         </div>
@@ -297,7 +506,7 @@ import NavPills from "./components/NavPillsSection";
 import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
-import { LoginCard } from "@/components";
+import {LoginCard} from "@/components";
 
 export default {
   components: {
@@ -345,14 +554,43 @@ export default {
     profile: {
       type: String,
       default: require("@/assets/img/profile.jpg")
-    }
+    },
+    teamImg1: {
+      type: String,
+      default: require("@/assets/img/coin/main01.jpg")
+    },
+    teamImg2: {
+      type: String,
+      default: require("@/assets/img/coin/main002.jpg")
+    },
+    teamImg3: {
+      type: String,
+      default: require("@/assets/img/coin/main003.jpg")
+    },
+    teamImg4: {
+      type: String,
+      default: require("@/assets/img/coin/004.jpeg")
+    },
+    teamImg5: {
+      type: String,
+      default: require("@/assets/img/coin/005.jpeg")
+    },
+    teamImg6: {
+      type: String,
+      default: require("@/assets/img/coin/006.png")
+    },
+    teamImg7: {
+      type: String,
+      default: require("@/assets/img/coin/007.png")
+    },
   },
   data() {
     return {
       firstname: null,
       email: null,
       password: null,
-      leafShow: false
+      leafShow: false,
+
     };
   },
   methods: {
