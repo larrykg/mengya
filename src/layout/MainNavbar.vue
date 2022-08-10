@@ -68,8 +68,8 @@
                   target="_self"
                   v-if="showDownload"
               >
-<!--                <i class="material-icons">content_paste</i>-->
-                <i   class="el-icon-search icon_font"></i>
+                <!--                <i class="material-icons">content_paste</i>-->
+                <i class="el-icon-search icon_font"></i>
                 <p>查询</p>
               </md-list-item>
 
@@ -123,43 +123,37 @@
               </li>
 
               <md-list-item
-                  href="https://twitter.com/CreativeTim"
+                  v-if="false"
                   target="_blank"
               >
-<!--                <i class="fab fa-twitter"></i>-->
+                <!--                <i class="fab fa-twitter"></i>-->
 
-                  <i  class="el-icon-s-operation icon_font"></i>
+                <i class="el-icon-s-operation icon_font"></i>
 
 
                 <p class="hidden-lg">手机文字</p>
-                <md-tooltip md-direction="bottom"
-                >一行文字
-                </md-tooltip
-                >
+<!--                <md-tooltip md-direction="bottom">-->
+<!--                </md-tooltip>-->
               </md-list-item>
               <md-list-item
-                  href="https://www.facebook.com/CreativeTim"
+                  v-if="false"
                   target="_blank"
               >
-<!--                <i class="fab fa-facebook-square"></i>-->
+                <!--                <i class="fab fa-facebook-square"></i>-->
                 <i class="el-icon-user icon_font"></i>
                 <p class="hidden-lg">人</p>
-                <md-tooltip md-direction="bottom"
-                >个人
-                </md-tooltip
-                >
+<!--                <md-tooltip md-direction="bottom">个人-->
+<!--                </md-tooltip>-->
               </md-list-item>
               <md-list-item
-                  href="https://www.instagram.com/CreativeTimOfficial"
+                  v-if="false"
                   target="_blank"
               >
-<!--                <i class="fab fa-instagram"></i>-->
+                <!--                <i class="fab fa-instagram"></i>-->
                 <i class="el-icon-share icon_font"></i>
                 <p class="hidden-lg">分享</p>
-                <md-tooltip md-direction="bottom"
-                >分享
-                </md-tooltip
-                >
+<!--                <md-tooltip md-direction="bottom">分享-->
+<!--                </md-tooltip>-->
               </md-list-item>
             </md-list>
           </div>
@@ -219,7 +213,7 @@ export default {
   },
   computed: {
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile","cert"];
+      const excludedRoutes = ["login", "landing", "profile", "cert"];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },
@@ -279,7 +273,7 @@ export default {
 </script>
 
 <style>
-.icon_font{
+.icon_font {
   font-size: 20px;
 }
 </style>

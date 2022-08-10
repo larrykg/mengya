@@ -72,12 +72,283 @@
         </div>
       </div>
 
+
       <div class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>
         </div>
       </div>
+      <div class="main main-raised">
 
+
+        <div class="section text-center">
+          <div class="container">
+            <h2 class="title">经典藏品</h2>
+            <div class="team">
+              <div class="md-layout">
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg1"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class="   "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        宣统年造大清银币伍角
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Model</small>-->
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          宣统年造大清银币伍角“1/2DOL.”一枚，K-220/LM-25，奥地利维也纳造币厂设计制模，1910年度支部天津造币总厂铸造，小批量生产并未发行，通体浅灰色包浆，底光尚存
+                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg2"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class=" "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        户部光绪元宝二十文铜币样币
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Designer</small-->
+
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          Y1903年户部光绪元宝二十文铜币样币一枚，Y-5/CL-HB.08a，属试样或留档样币性质，币坯制作精良，压力十足，马齿凌厉，图文深峻精美，底版充盈红铜光泽，精整度明显优于流通币，与中国钱币博物馆馆藏之户部二十文留档样币风格一致，存世极罕；据周沁园、李平文编著《中国机制铜元目录》记述，户部二十文样币目前私人收藏仅有二枚，另据孙浩先生考证，此版户部二十文流通币发行的时间和地点，并非晚清的天津总厂，而是1917年由湖北的武昌厂制作
+                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg3"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class="  "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        户部光绪元宝十文铜币
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Model</small>-->
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          1903年户部光绪元宝十文铜币一枚，Y-4/CL-HB.04，边花阴蕊版，全深打，铜光颇佳，PCGS MS63RB，目前为该公司RB级评级纪录唯一冠军分
+                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+
+              </div>
+              <div class="md-layout">
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg4"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class="   "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        丁未大清铜币十文
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Model</small>-->
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          1905年乙巳户部大清铜币二十文一枚                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg2"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class=" "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        光绪戊申中心“总”一文背二文部颁龙铜币样币
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Designer</small-->
+
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          1908年光绪戊申中心“总”一文背二文部颁龙铜币样币一枚，CCC-642/CL-HB.50，度支部天津造币总厂试铸，未发行，存世稀少；样币铜质优良，压印深峻，龙图饱满，品相颇佳                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="team-player">
+                    <md-card class="md-card-plain">
+                      <div class="md-layout-item md-size-50 mx-auto">
+                        <img
+                            :src="teamImg3"
+                            alt="Thumbnail Image"
+                            style="width: 400px;height: 100px"
+                            class="  "
+                        />
+                      </div>
+                      <h4 class="card-title">
+                        己酉大清铜币二十文
+                        <br/>
+                        <!--                        <small class="card-description text-muted">Model</small>-->
+                      </h4>
+
+                      <md-card-content>
+                        <p class="card-description">
+                          909年己酉大清铜币二十文一枚，Y-21/CL-HB.63，细字宣统龙带点版                        </p>
+                      </md-card-content>
+
+
+                    </md-card>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="container">
+            <div class="md-layout">
+              <div
+                  class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
+              >
+                <h2 class="title text-center">我们的组成</h2>
+                <h5 class="description">
+                  客户服务部、鉴定评级部、封装部、产品检验部、包装物流部、运行推广部、销售部、产品研发部、工厂生产部、人力资
+                  源部等10个主要部门组成。
+                  所有的员工都是经过严格的培训，有着丰富的业内知识。其中鉴定评级部和产品研发部，更是来自于业内的顶尖级人士组成。
+                </h5>
+              </div>
+            </div>
+            <div class="features text-center">
+              <div class="md-layout">
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="info">
+                    <div class="icon icon-info">
+                      <md-icon>star</md-icon>
+                    </div>
+                    <h4 class="info-title">我们的理念</h4>
+                    <p>
+                      秉承用我们专业的技术、公正的操守、精细的做工、完美的服务，来最大化彰显您钱币的价值。
+                    </p>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="info">
+                    <div class="icon icon-success">
+                      <md-icon>verified_user</md-icon>
+                    </div>
+                    <h4 class="info-title">我们的品质</h4>
+                    <p>
+                      秉承用我们专业的技术、公正的操守、精细的做工、完美的服务，来最大化彰显您钱币的价值。
+                    </p>
+                  </div>
+                </div>
+                <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                  <div class="info">
+                    <div class="icon icon-danger">
+                      <md-icon>help</md-icon>
+                    </div>
+                    <h4 class="info-title">我们的服务</h4>
+                    <p>
+                      评级鉴定服务，已实现了对各个品种的中国古代、近代、现代钱币及世界各国的古代、近代、现代钱币，中国邮票、外国邮票，进行权威性专业性的评级与鉴定服务。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="false" class="section section-contacts">
+          <div class="container">
+            <div class="md-layout">
+              <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
+                <h2 class="text-center title">Work with us</h2>
+                <h4 class="text-center description">
+                  Divide details about your product or agency work into parts.
+                  Write a few lines about each one and contact us about any
+                  further collaboration. We will responde get back to you in a
+                  couple of hours.
+                </h4>
+                <form class="contact-form">
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-50">
+                      <md-field>
+                        <label>Your Name</label>
+                        <md-input v-model="name" type="text"></md-input>
+                      </md-field>
+                    </div>
+                    <div class="md-layout-item md-size-50">
+                      <md-field>
+                        <label>Your Email</label>
+                        <md-input v-model="email" type="email"></md-input>
+                      </md-field>
+                    </div>
+                  </div>
+                  <md-field maxlength="5">
+                    <label>Your Message</label>
+                    <md-textarea v-model="message"></md-textarea>
+                  </md-field>
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-33 mx-auto text-center">
+                      <md-button class="md-success">Send Message</md-button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <tabs></tabs>
 
       <div v-if="false" class="section">
@@ -191,200 +462,9 @@
           </div>
         </div>
       </div>
-      <div class="main main-raised">
-        <div class="section">
-          <div class="container">
-            <div class="md-layout">
-              <div
-                  class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
-              >
-                <h2 class="title text-center">经典藏品</h2>
-                <h5 class="description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here. Add a button if you
-                  want the user to see more.
-                </h5>
-              </div>
-            </div>
-            <div class="features text-center">
-              <div class="md-layout">
-                <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="info">
-                    <div class="icon icon-info">
-                      <md-icon>chat</md-icon>
-                    </div>
-                    <h4 class="info-title">Free Chat</h4>
-                    <p>
-                      Divide details about your product or agency work into parts.
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough.
-                    </p>
-                  </div>
-                </div>
-                <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="info">
-                    <div class="icon icon-success">
-                      <md-icon>verified_user</md-icon>
-                    </div>
-                    <h4 class="info-title">Verified Users</h4>
-                    <p>
-                      Divide details about your product or agency work into parts.
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough.
-                    </p>
-                  </div>
-                </div>
-                <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="info">
-                    <div class="icon icon-danger">
-                      <md-icon>fingerprint</md-icon>
-                    </div>
-                    <h4 class="info-title">Fingerprint</h4>
-                    <p>
-                      Divide details about your product or agency work into parts.
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section text-center">
-          <div class="container">
-            <h2 class="title">经典藏品</h2>
-            <div class="team">
-              <div class="md-layout">
-                <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="team-player">
-                    <md-card class="md-card-plain">
-                      <div class="md-layout-item md-size-50 mx-auto">
-                        <img
-                            :src="teamImg1"
-                            alt="Thumbnail Image"
-                            style="width: 400px;height: 100px"
-                            class="   "
-                        />
-                      </div>
-                      <h4 class="card-title">
-                        宣统年造大清银币伍角
-                        <br/>
-<!--                        <small class="card-description text-muted">Model</small>-->
-                      </h4>
-
-                      <md-card-content>
-                        <p class="card-description">
-                          宣统年造大清银币伍角“1/2DOL.”一枚，K-220/LM-25，奥地利维也纳造币厂设计制模，1910年度支部天津造币总厂铸造，小批量生产并未发行，通体浅灰色包浆，底光尚存
-                        </p>
-                      </md-card-content>
 
 
-                    </md-card>
-                  </div>
-                </div>
-                <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="team-player">
-                    <md-card class="md-card-plain">
-                      <div class="md-layout-item md-size-50 mx-auto">
-                        <img
-                            :src="teamImg2"
-                            alt="Thumbnail Image"
-                            style="width: 400px;height: 100px"
-                            class=" "
-                        />
-                      </div>
-                      <h4 class="card-title">
-                        户部光绪元宝二十文铜币样币
-                        <br/>
-<!--                        <small class="card-description text-muted">Designer</small-->
 
-                      </h4>
-
-                      <md-card-content>
-                        <p class="card-description">
-                          Y1903年户部光绪元宝二十文铜币样币一枚，Y-5/CL-HB.08a，属试样或留档样币性质，币坯制作精良，压力十足，马齿凌厉，图文深峻精美，底版充盈红铜光泽，精整度明显优于流通币，与中国钱币博物馆馆藏之户部二十文留档样币风格一致，存世极罕；据周沁园、李平文编著《中国机制铜元目录》记述，户部二十文样币目前私人收藏仅有二枚，另据孙浩先生考证，此版户部二十文流通币发行的时间和地点，并非晚清的天津总厂，而是1917年由湖北的武昌厂制作
-                        </p>
-                      </md-card-content>
-
-
-                    </md-card>
-                  </div>
-                </div>
-                <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="team-player">
-                    <md-card class="md-card-plain">
-                      <div class="md-layout-item md-size-50 mx-auto">
-                        <img
-                            :src="teamImg3"
-                            alt="Thumbnail Image"
-                            style="width: 400px;height: 100px"
-                            class="  "
-                        />
-                      </div>
-                      <h4 class="card-title">
-                        户部光绪元宝十文铜币
-                        <br/>
-                        <!--                        <small class="card-description text-muted">Model</small>-->
-                      </h4>
-
-                      <md-card-content>
-                        <p class="card-description">
-                          1903年户部光绪元宝十文铜币一枚，Y-4/CL-HB.04，边花阴蕊版，全深打，铜光颇佳，PCGS MS63RB，目前为该公司RB级评级纪录唯一冠军分
-                        </p>
-                      </md-card-content>
-
-
-                    </md-card>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section section-contacts">
-          <div class="container">
-            <div class="md-layout">
-              <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
-                <h2 class="text-center title">Work with us</h2>
-                <h4 class="text-center description">
-                  Divide details about your product or agency work into parts.
-                  Write a few lines about each one and contact us about any
-                  further collaboration. We will responde get back to you in a
-                  couple of hours.
-                </h4>
-                <form class="contact-form">
-                  <div class="md-layout">
-                    <div class="md-layout-item md-size-50">
-                      <md-field>
-                        <label>Your Name</label>
-                        <md-input v-model="name" type="text"></md-input>
-                      </md-field>
-                    </div>
-                    <div class="md-layout-item md-size-50">
-                      <md-field>
-                        <label>Your Email</label>
-                        <md-input v-model="email" type="email"></md-input>
-                      </md-field>
-                    </div>
-                  </div>
-                  <md-field maxlength="5">
-                    <label>Your Message</label>
-                    <md-textarea v-model="message"></md-textarea>
-                  </md-field>
-                  <div class="md-layout">
-                    <div class="md-layout-item md-size-33 mx-auto text-center">
-                      <md-button class="md-success">Send Message</md-button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div v-if="false" class="section section-download" id="downloadSection">
         <div class="container">
           <div class="md-layout text-center">
@@ -527,6 +607,10 @@ export default {
       type: String,
       default: require("@/assets/img/vue-mk-header.jpg")
     },
+    header: {
+      type: String,
+      default: require("@/assets/img/coin/header.jpg")
+    },
     leaf4: {
       type: String,
       default: require("@/assets/img/leaf4.png")
@@ -569,7 +653,7 @@ export default {
     },
     teamImg4: {
       type: String,
-      default: require("@/assets/img/coin/004.jpeg")
+      default: require("@/assets/img/coin/main004.jpg")
     },
     teamImg5: {
       type: String,
