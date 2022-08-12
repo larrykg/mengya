@@ -137,7 +137,7 @@
                 alt=""
                 v-for="(imgUrl,index) in url"
                 :key="index"
-                style="width: 200px; height: 400px;margin-left: 10px"
+                style="width: 200px; height: 400px;margin-left: 10px;display: block;position: relative;left: 40%"
                 :src="imgUrl.product_img"
                 :preview-src-list="picUrl">
             </el-image>

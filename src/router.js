@@ -11,6 +11,7 @@ import Cert from "@/views/Cert/Cert";
 Vue.use(Router);
 
 export default new Router({
+  base:'/cert/',
   routes: [
     {
       path: "/",
@@ -21,32 +22,32 @@ export default new Router({
         footer: { backgroundColor: "black" }
       }
     },
-    {
-      path: "/landing",
-      name: "landing",
-      components: { default: Landing, header: MainNavbar, footer: MainFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: "black" }
-      }
-    },
-    {
-      path: "/login",
-      name: "login",
-      components: { default: Login, header: MainNavbar, footer: MainFooter },
-      props: {
-        header: { colorOnScroll: 400 }
-      }
-    },
-    {
-      path: "/profile",
-      name: "profile",
-      components: { default: Profile, header: MainNavbar, footer: MainFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: "black" }
-      }
-    },
+    // {
+    //   path: "/landing",
+    //   name: "landing",
+    //   components: { default: Landing, header: MainNavbar, footer: MainFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 },
+    //     footer: { backgroundColor: "black" }
+    //   }
+    // },
+    // {
+    //   path: "/login",
+    //   name: "login",
+    //   components: { default: Login, header: MainNavbar, footer: MainFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 }
+    //   }
+    // },
+    // {
+    //   path: "/profile",
+    //   name: "profile",
+    //   components: { default: Profile, header: MainNavbar, footer: MainFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 },
+    //     footer: { backgroundColor: "black" }
+    //   }
+    // },
     {
       path: "/cert",
       name: "cert",
