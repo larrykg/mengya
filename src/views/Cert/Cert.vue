@@ -137,7 +137,8 @@
                 alt=""
                 v-for="(imgUrl,index) in url"
                 :key="index"
-                style="width: 200px; height: 400px;margin-left: 10px;display: block;position: relative;left: 40%"
+                style="display: block"
+                :class="{ 'phone':isPhone,'normal':!isPhone}"
                 :src="imgUrl.product_img"
                 :preview-src-list="picUrl">
             </el-image>
@@ -215,6 +216,7 @@ export default {
   bodyClass: "profile-page",
   data() {
     return {
+      isPhone:false,
       url: [],
       picUrl: [],
       product_info: '产品信息',
@@ -279,6 +281,12 @@ export default {
     img: {
       type: String,
       default: require("@/assets/img/cert/mogen_001.jpeg")
+    }
+  },
+  mounted() {
+    let agent =  navigator.userAgent;
+    if(!!agent.match(/AppleWebKit.*Mobile.*/)){
+      this.isPhone = true
     }
   },
   computed: {
@@ -356,7 +364,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.normal {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 45%;
+  display: block
+}
+.phone{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 28%;
+  display: block
+}
 .cert_input {
   width: 500px;
 }
