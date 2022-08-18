@@ -69,17 +69,18 @@
                   v-if="showDownload"
               >
                 <!--                <i class="material-icons">content_paste</i>-->
-                <i class="el-icon-search icon_font"></i>
-                <p>查询</p>
+                <i style="color: #000" class="el-icon-search icon_font"></i>
+                <p style="color: #000">查询</p>
               </md-list-item>
 
               <md-list-item
                   href="javascript:void(0)"
                   @click="scrollToElement()"
-                  v-if="false"
+
               >
-                <i class="material-icons">cloud_download</i>
-                <p>Download</p>
+<!--                <i class="material-icons">cloud_download</i>-->
+                <i style="color: #000" class="el-icon-trophy icon_font"></i>
+                <p style="color: #000">经典藏品</p>
               </md-list-item>
 
               <li class="md-list-item" v-if="false">

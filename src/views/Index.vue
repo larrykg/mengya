@@ -78,6 +78,7 @@
           <javascript-components></javascript-components>
         </div>
       </div>
+
       <div class="main main-raised">
 
 
@@ -605,7 +606,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/vue-mk-header.jpg")
+      default: require("@/assets/img/coin/main.jpg")
     },
     header: {
       type: String,
@@ -682,7 +683,7 @@ export default {
       if (window.innerWidth < 768) {
         this.leafShow = false;
       } else {
-        this.leafShow = true;
+        this.leafShow = false;
       }
     },
     removeNotify(e, notifyClass) {

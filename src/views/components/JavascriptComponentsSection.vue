@@ -147,6 +147,7 @@
       <div v-if="false" class="title">
         <h3>Carousel</h3>
       </div>
+
       <div class="md-layout">
         <div class="md-layout-item md-size-66 mx-auto md-small-size-100">
           <md-card>
