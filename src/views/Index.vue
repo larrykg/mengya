@@ -73,7 +73,10 @@
       </div>
 
 
-      <div class="section section-javascript">
+<!--    跑马灯区域-->
+      <Carousel/>
+
+      <div v-if="false" class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>
         </div>
@@ -588,9 +591,10 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import {LoginCard} from "@/components";
-
+import  Carousel from './components/Carousel'
 export default {
   components: {
+    Carousel,
     BasicElements,
     Navigation,
     SmallNavigation,
