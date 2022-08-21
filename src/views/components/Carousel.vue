@@ -1,8 +1,11 @@
 <template>
   <el-carousel  :interval="4000" type="card" height="400px">
     <el-carousel-item  v-for="(item,index) in carouselImg" :key="index">
-      <img @click="change(item.id)" :src="item.url" alt="">
-      <h3 class="medium">{{ item.title }}</h3>
+      <div class="content">
+        <img @click="change(item.id)" :src="item.url" alt="">
+        <h3 class="medium">{{ item.title }}</h3>
+      </div>
+
     </el-carousel-item>
   </el-carousel>
 </template>
@@ -41,12 +44,16 @@ export default {
   methods:{
     change(id){
       console.log(id);
+      this.$router.push({path:'/detailList',query:{"detailList":id}})
     }
   }
 }
 </script>
 
 <style scoped>
+.content{
+  padding: 0px;
+}
 .el-carousel__item h3 {
   color: #000;
   font-size: 14px;

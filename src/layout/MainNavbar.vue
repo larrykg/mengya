@@ -74,9 +74,11 @@
               </md-list-item>
 
               <md-list-item
-                  href="javascript:void(0)"
+
                   @click="scrollToElement()"
                   v-if="showDownload"
+                  href="#/detailList"
+                  target="_self"
               >
 <!--                <i class="material-icons">cloud_download</i>-->
                 <i style="color: #000" class="el-icon-trophy icon_font"></i>

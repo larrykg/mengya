@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <parallax class="page-header header-filter" :style="headerStyle">
+    <parallax class="main_header " :style="headerStyle">
       <div class="md-layout">
         <div class="md-layout-item">
           <div class="image-wrapper">
@@ -74,7 +74,10 @@
 
 
       <!--    跑马灯区域-->
-      <Carousel/>
+      <div class="main  ">
+        <Carousel/>
+      </div>
+
       <!--      手风琴模块-->
       <div class="main main-raised" style="min-height: 500px;padding: 10px">
 
@@ -736,6 +739,9 @@ export default {
 };
 </script>
 <style lang="scss">
+.main_header{
+  height: 300px;
+}
 .section-download {
   .md-button + .md-button {
     margin-left: 5px;
