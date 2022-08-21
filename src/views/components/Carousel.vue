@@ -1,7 +1,7 @@
 <template>
   <el-carousel  :interval="4000" type="card" height="400px">
     <el-carousel-item  v-for="(item,index) in carouselImg" :key="index">
-      <img @click="change" :src="item.url" alt="">
+      <img @click="change(item.id)" :src="item.url" alt="">
       <h3 class="medium">{{ item.title }}</h3>
     </el-carousel-item>
   </el-carousel>
@@ -16,27 +16,31 @@ export default {
       carouselImg: [
         {
           url: require("@/assets/img/coin/main01.jpg"),
-          title: '一个勺子'
+          title: '一个勺子',
+          id:'9527'
         },
         {
           url: require("@/assets/img/coin/main002.jpg"),
-          title: '一个勺子'
+          title: '一个勺子',
+          id:'9528'
         },
         {
           url: require("@/assets/img/coin/main003.jpg"),
-          title: '一个勺子'
+          title: '一个勺子',
+          id:'9529'
         },
         {
           url: require("@/assets/img/coin/main004.jpg"),
-          title: '一个勺子'
+          title: '一个勺子',
+          id:'9530'
         }
 
       ]
     }
   },
   methods:{
-    change(){
-      console.log('112');
+    change(id){
+      console.log(id);
     }
   }
 }

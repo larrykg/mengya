@@ -7,8 +7,8 @@
       :color-on-scroll="colorOnScroll"
   >
     <div class="md-toolbar-row md-collapse-lateral">
-      <div class="md-toolbar-section-start">
-        <h3 class="md-title"></h3>
+      <div class="md-toolbar-section-start" v-if="showDownload">
+        <h3 class="md-title">一直在专业地</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -66,7 +66,7 @@
               <md-list-item
                   href="#/cert"
                   target="_self"
-                  v-if="showDownload"
+
               >
                 <!--                <i class="material-icons">content_paste</i>-->
                 <i style="color: #000" class="el-icon-search icon_font"></i>
@@ -76,7 +76,7 @@
               <md-list-item
                   href="javascript:void(0)"
                   @click="scrollToElement()"
-
+                  v-if="showDownload"
               >
 <!--                <i class="material-icons">cloud_download</i>-->
                 <i style="color: #000" class="el-icon-trophy icon_font"></i>
@@ -214,7 +214,7 @@ export default {
   },
   computed: {
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile", "cert"];
+      const excludedRoutes = ["login", "landing", "profile", "cert",'detailList'];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },
