@@ -7,6 +7,7 @@ import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
 import Cert from "@/views/Cert/Cert";
+import DetailList from "@/views/DetailList/DetailList";
 
 Vue.use(Router);
 
@@ -22,15 +23,24 @@ export default new Router({
         footer: { backgroundColor: "black" }
       }
     },
-    // {
-    //   path: "/landing",
-    //   name: "landing",
-    //   components: { default: Landing, header: MainNavbar, footer: MainFooter },
-    //   props: {
-    //     header: { colorOnScroll: 400 },
-    //     footer: { backgroundColor: "black" }
-    //   }
-    // },
+    {
+      path: "/landing",
+      name: "landing",
+      components: { default: Landing, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
+      path: "/detailList",
+      name: "detailList",
+      components: { default: DetailList, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
     // {
     //   path: "/login",
     //   name: "login",
@@ -39,15 +49,15 @@ export default new Router({
     //     header: { colorOnScroll: 400 }
     //   }
     // },
-    // {
-    //   path: "/profile",
-    //   name: "profile",
-    //   components: { default: Profile, header: MainNavbar, footer: MainFooter },
-    //   props: {
-    //     header: { colorOnScroll: 400 },
-    //     footer: { backgroundColor: "black" }
-    //   }
-    // },
+      {
+      path: "/profile",
+      name: "profile",
+      components: { default: Profile, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
     {
       path: "/cert",
       name: "cert",

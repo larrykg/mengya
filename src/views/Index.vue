@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <parallax class="page-header header-filter" :style="headerStyle">
+    <parallax class="main_header " :style="headerStyle">
       <div class="md-layout">
         <div class="md-layout-item">
           <div class="image-wrapper">
@@ -73,11 +73,32 @@
       </div>
 
 
-      <div class="section section-javascript">
+      <!--    跑马灯区域-->
+      <div class="main  ">
+        <Carousel/>
+      </div>
+
+      <!--      手风琴模块-->
+      <div class="main main-raised" style="min-height: 500px;padding: 10px">
+
+        <div style="display: inline-block;width: 50%;">
+          <h3 style="position:sticky;top: 0; ">行业动态</h3>
+          <Collapse />
+        </div>
+
+        <div style="display: inline-block;width: 50%">
+          <h3 style="position:sticky;top: 0; ">公司动态</h3>
+          <Collapse/>
+        </div>
+
+      </div>
+
+      <div v-if="false" class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>
         </div>
       </div>
+
       <div class="main main-raised">
 
 
@@ -190,7 +211,7 @@
 
                       <md-card-content>
                         <p class="card-description">
-                          1905年乙巳户部大清铜币二十文一枚                        </p>
+                          1905年乙巳户部大清铜币二十文一枚 </p>
                       </md-card-content>
 
 
@@ -217,7 +238,7 @@
 
                       <md-card-content>
                         <p class="card-description">
-                          1908年光绪戊申中心“总”一文背二文部颁龙铜币样币一枚，CCC-642/CL-HB.50，度支部天津造币总厂试铸，未发行，存世稀少；样币铜质优良，压印深峻，龙图饱满，品相颇佳                        </p>
+                          1908年光绪戊申中心“总”一文背二文部颁龙铜币样币一枚，CCC-642/CL-HB.50，度支部天津造币总厂试铸，未发行，存世稀少；样币铜质优良，压印深峻，龙图饱满，品相颇佳 </p>
                       </md-card-content>
 
 
@@ -243,7 +264,7 @@
 
                       <md-card-content>
                         <p class="card-description">
-                          909年己酉大清铜币二十文一枚，Y-21/CL-HB.63，细字宣统龙带点版                        </p>
+                          909年己酉大清铜币二十文一枚，Y-21/CL-HB.63，细字宣统龙带点版 </p>
                       </md-card-content>
 
 
@@ -464,7 +485,6 @@
       </div>
 
 
-
       <div v-if="false" class="section section-download" id="downloadSection">
         <div class="container">
           <div class="md-layout text-center">
@@ -587,9 +607,13 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import {LoginCard} from "@/components";
+import Carousel from './components/Carousel'
+import Collapse from './components/Collapse'
 
 export default {
   components: {
+    Carousel,
+    Collapse,
     BasicElements,
     Navigation,
     SmallNavigation,
@@ -605,7 +629,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/vue-mk-header.jpg")
+      default: require("@/assets/img/coin/main.jpg")
     },
     header: {
       type: String,
@@ -682,7 +706,7 @@ export default {
       if (window.innerWidth < 768) {
         this.leafShow = false;
       } else {
-        this.leafShow = true;
+        this.leafShow = false;
       }
     },
     removeNotify(e, notifyClass) {
@@ -715,6 +739,9 @@ export default {
 };
 </script>
 <style lang="scss">
+.main_header{
+  height: 300px;
+}
 .section-download {
   .md-button + .md-button {
     margin-left: 5px;
