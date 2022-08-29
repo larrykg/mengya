@@ -5,7 +5,8 @@ import nprogress from  'nprogress';
 import 'nprogress/nprogress.css';
 
 const requests = axios.create({
-    baseURL: 'http://119.29.163.64:8080',
+    // baseURL: 'http://119.29.163.64:8080',
+    baseURL: 'api/',
     timeout: 5000
 })
 //请求拦截器
