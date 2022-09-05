@@ -39,6 +39,7 @@
             </el-collapse-item>
           </el-collapse>
         </div>
+
         <div class="main_content_right">
 <!--          此处为信息展示板块-->
           <div>
@@ -262,10 +263,12 @@
 
 <script>
 import ElTree from "@/views/components/ElTree";
+import {getRotationInfo} from '@/api' ;
 export default {
   name: "DetailList",
   data() {
     return {
+      configList:[],
       activeIndex: '1',
       activeInfo:{
         imageUrl:'http://imagecdn.chengxuan.com/images/2022s/1743.jpg',
@@ -282,6 +285,13 @@ export default {
       type: String,
       default: require("@/assets/img/cert/mogen_001.jpeg")
     }
+  },
+  async created() {
+    let detailListId = this.$route.query.detailListId;
+    console.log(detailListId);
+    let res = await getRotationInfo(detailListId);
+    if (res.status > 0) return this.$message.error("获取配置列表失败")
+    this.configList = res.data.list
   },
   computed: {
     headerStyle() {

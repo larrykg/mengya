@@ -7,3 +7,12 @@ export const getProductInfo = (product_id) => {
         method: 'get'
     })
 }
+
+//获取跑马灯配置
+export const getRotationInfo = (id) => {
+    return requests({
+        url: `/front/product/list`,
+        method: 'post',
+        data: {id}
+    })
+}

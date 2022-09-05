@@ -83,7 +83,7 @@
 
         <div style="display: inline-block;width: 50%;">
           <h3 style="position:sticky;top: 0; ">行业动态</h3>
-          <Collapse />
+          <Collapse/>
         </div>
 
         <div style="display: inline-block;width: 50%">
@@ -107,6 +107,7 @@
             <h2 class="title">经典藏品</h2>
             <div class="team">
               <div class="md-layout">
+
                 <div class="md-layout-item md-medium-size-33 md-small-size-100">
                   <div class="team-player">
                     <md-card class="md-card-plain">
@@ -694,6 +695,7 @@ export default {
   },
   data() {
     return {
+      configList: [],
       firstname: null,
       email: null,
       password: null,
@@ -717,6 +719,7 @@ export default {
       return target.parentNode.removeChild(target);
     }
   },
+
   computed: {
     headerStyle() {
       return {
@@ -739,9 +742,10 @@ export default {
 };
 </script>
 <style lang="scss">
-.main_header{
+.main_header {
   height: 300px;
 }
+
 .section-download {
   .md-button + .md-button {
     margin-left: 5px;

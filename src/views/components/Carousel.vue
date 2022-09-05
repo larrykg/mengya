@@ -1,9 +1,9 @@
 <template>
   <el-carousel  :interval="4000" type="card" height="400px">
-    <el-carousel-item  v-for="(item,index) in carouselImg" :key="index">
+    <el-carousel-item  v-for="(item,index) in configList" :key="index">
       <div class="content">
-        <img @click="change(item.id)" :src="item.url" alt="">
-        <h3 class="medium">{{ item.title }}</h3>
+        <img @click="change(item.id)" :src="item.image_url" alt="">
+        <h3 class="medium">{{ item.name }}</h3>
       </div>
 
     </el-carousel-item>
@@ -11,11 +11,12 @@
 </template>
 
 <script>
-
+import {getRotationInfo} from '@/api' ;
 export default {
   name: "Carousel",
   data() {
     return {
+      configList:[],
       carouselImg: [
         {
           url: require("@/assets/img/coin/main01.jpg"),
@@ -41,10 +42,15 @@ export default {
       ]
     }
   },
+  async created() {
+    let res = await getRotationInfo();
+    if (res.status > 0) return this.$message.error("获取配置列表失败")
+    this.configList = res.data.list
+  },
   methods:{
     change(id){
       console.log(id);
-      this.$router.push({path:'/detailList',query:{"detailList":id}})
+      this.$router.push({path:'/detailList',query:{"detailListId":id}})
     }
   }
 }
