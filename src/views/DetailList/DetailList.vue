@@ -16,7 +16,7 @@
           </div>
         </div>
 
-        <div class="main_content_left" >
+        <div class="main_content_left">
           <h3>公司藏品</h3>
 
           <el-collapse v-model="activeIndex" accordion>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="main_content_right">
-<!--          此处为信息展示板块-->
+          <!--          此处为信息展示板块-->
           <div>
             <div class="right_img">
               <el-image
@@ -49,18 +49,17 @@
                   :src="activeInfo.imageUrl"
                   :preview-src-list="activeInfo.srcList">
               </el-image>
-              <h3>宣统三年大清银币壹圆</h3>
+              <!--              <h3>{{configObj.name}}</h3>-->
             </div>
             <div class="right_text">
               <div>
-                <h3>宣统三年大清银币壹圆/2017年收录</h3>
+                <h3>{{ detailName }}</h3>
               </div>
               <hr>
               <div>
                 <h3>简介</h3>
                 <p>
-                  宣统三年大清银币壹圆一枚，Y-31/LM-37， VF35
-                  评级编号：87697559</p>
+                  {{ configObj.desc }}</p>
               </div>
             </div>
           </div>
@@ -263,16 +262,20 @@
 
 <script>
 import ElTree from "@/views/components/ElTree";
-import {getRotationInfo} from '@/api' ;
+import {getSinRotationInfo} from '@/api' ;
+
 export default {
   name: "DetailList",
   data() {
     return {
-      configList:[],
+      configObj: {
+        name:'',
+        desc:''
+      },
       activeIndex: '1',
-      activeInfo:{
-        imageUrl:'http://imagecdn.chengxuan.com/images/2022s/1743.jpg',
-        srcList:['http://imagecdn.chengxuan.com/images/2022s/1743.jpg']
+      activeInfo: {
+        imageUrl: ' ',
+        srcList: []
       }
     };
   },
@@ -289,25 +292,33 @@ export default {
   async created() {
     let detailListId = this.$route.query.detailListId;
     console.log(detailListId);
-    let res = await getRotationInfo(detailListId);
+    let res = await getSinRotationInfo(detailListId);
     if (res.status > 0) return this.$message.error("获取配置列表失败")
-    this.configList = res.data.list
+    this.configObj = res.data.list[0];
+    this.activeInfo.imageUrl = this.configObj.image_url;
+    this.activeInfo.srcList.push(this.configObj.image_url)
+    console.log(this.configObj);
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`
+        backgroundImage: `url(${this.header})`,
+
       };
+    },
+    detailName() {
+      return this.configObj.name ? this.configObj.name : ''
     }
   },
 }
 </script>
 
 <style scoped>
-.main_bread{
+.main_bread {
   text-align: left;
   border-bottom: 1px solid #000;
 }
+
 .main_content {
   text-align: center;
   padding: 20px 10px;
@@ -318,12 +329,14 @@ export default {
   min-height: 1300px;
   width: 20%
 }
-.main_content_right{
+
+.main_content_right {
   display: inline-block;
-  padding: 66px 0 0 0 ;
+  padding: 66px 0 0 0;
   width: 60%;
 }
-.right_img{
+
+.right_img {
 
 }
 </style>

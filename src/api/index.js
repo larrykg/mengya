@@ -9,10 +9,19 @@ export const getProductInfo = (product_id) => {
 }
 
 //获取跑马灯配置
-export const getRotationInfo = (id) => {
+export const getRotationInfo = () => {
     return requests({
         url: `/front/product/list`,
-        method: 'post',
-        data: {id}
+        method: 'get'
+
+    })
+}
+
+//获取单个跑马灯信息
+export const getSinRotationInfo = (id) => {
+    return requests({
+        url: `/front/product/list?id=${id}`,
+        method: 'get'
+
     })
 }
